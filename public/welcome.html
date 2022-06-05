@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello</title>
+</head>
+
+<body>
+</body>
+<script>
+const query = window.location.search.substring(1) || '';
+const name = query.split('name=')[1];
+document.body.appendChild(
+  document.createTextNode(`Welcome, ${decodeURIComponent(name)}`)
+);
+
+const image = document.createElement('img')
+image.src  = 'https://mixin-images.zeromesh.net/Y4W0x65KfNK5mKb8dW2zg27rTQ6wGQgqquHg0hjotwMv1w8u8MgViUOK6gjSXCw7aDOufBOGX0oBKHoCq77VfvrZwxkzgpfZ-KM=s256'
+document.body.appendChild(image)
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mixin OAuth</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+        <a id="login">Login with Mixin</a>
+<script>
+  // fill in your cliend_id
+  const client_id = '7ac9341f-61c1-4b49-b466-298397fe1624';
+
+  const authorize_uri = 'https://www.mixin.one/oauth/authorize';
+  const return_to = 'http://localhost:8080/oauth/redirect';
+
+  const link = document.getElementById('login');
+  link.href = `${authorize_uri}?client_id=${client_id}&scope=PROFILE:READ&response_type=code&return_to=${return_to}`;
+</script>
+
+</body>
+
+</html>
